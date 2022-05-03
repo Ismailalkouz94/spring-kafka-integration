@@ -1,7 +1,7 @@
 package com.example.springkafkaproducer.producer;
 
 import com.example.springkafkaproducer.config.ApplicationConfig;
-import com.example.springkafkaproducer.model.Person;
+import com.example.springkafkacommon.model.Person;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -10,8 +10,6 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
-
-import java.util.Date;
 
 @Slf4j
 @Component

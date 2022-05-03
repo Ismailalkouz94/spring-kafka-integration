@@ -1,6 +1,6 @@
 package com.example.springkafkaconsumer.consumer;
 
-import com.example.springkafkaconsumer.model.Person;
+import com.example.springkafkacommon.model.Person;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;

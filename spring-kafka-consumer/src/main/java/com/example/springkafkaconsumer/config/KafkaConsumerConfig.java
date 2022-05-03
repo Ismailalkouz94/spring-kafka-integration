@@ -1,6 +1,6 @@
 package com.example.springkafkaconsumer.config;
 
-import com.example.springkafkaconsumer.model.Person;
+import com.example.springkafkacommon.model.Person;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +39,7 @@ public class KafkaConsumerConfig {
     }
 
 
-    @Bean(name="json")
+    @Bean(name = "json")
     public ConsumerFactory<String, Person> consumerFactoryJson() {
         JsonDeserializer<Person> deserializer = new JsonDeserializer<>(Person.class);
         deserializer.setRemoveTypeHeaders(false);
@@ -57,16 +57,16 @@ public class KafkaConsumerConfig {
 
     @Bean
     public ConcurrentKafkaListenerContainerFactory<String, Person> kafkaListenerContainerFactory() {
-        ConcurrentKafkaListenerContainerFactory<String, Person> factory =new ConcurrentKafkaListenerContainerFactory<>();
+        ConcurrentKafkaListenerContainerFactory<String, Person> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
         //factory.setRecordFilterStrategy(record -> record.value().contains("XXX"));
         return factory;
     }
 
 
-    @Bean(name="json")
+    @Bean(name = "json")
     public ConcurrentKafkaListenerContainerFactory<String, Person> kafkaListenerContainerFactoryJson() {
-        ConcurrentKafkaListenerContainerFactory<String, Person> factory =new ConcurrentKafkaListenerContainerFactory<>();
+        ConcurrentKafkaListenerContainerFactory<String, Person> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactoryJson());
         return factory;
     }

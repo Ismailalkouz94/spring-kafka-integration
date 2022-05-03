@@ -1,4 +1,4 @@
-package com.example.springkafkaproducer.model;
+package com.example.springkafkacommon.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

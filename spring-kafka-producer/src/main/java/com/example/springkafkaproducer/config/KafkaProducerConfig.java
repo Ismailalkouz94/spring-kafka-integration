@@ -1,6 +1,5 @@
 package com.example.springkafkaproducer.config;
-
-import com.example.springkafkaproducer.model.Person;
+import com.example.springkafkacommon.model.Person;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Autowired;
